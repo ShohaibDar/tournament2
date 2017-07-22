@@ -4,15 +4,19 @@
 <script>
 var players = [];
 var totPlayers = 16;
+
+function start(){
 for(var i =0;i<totPlayers;i++)
 	players[i]= Math.floor((Math.random() * 51) + 50);
+
 document.getElementById("p1").innerHTML = players;
+	
+}
 
 </script>
 </head>
-<body>
-<h1> </h1>
-  	<p>Contestants: </p>
+<body onload="start()">
+<h1>Contestants: </h1>
 	<p id="p1"></p>
 </body>
 </html>
