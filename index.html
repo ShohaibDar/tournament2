@@ -10,13 +10,20 @@ for(var i =0;i<totPlayers;i++)
 	players[i]= Math.floor((Math.random() * 51) + 50);
 
 document.getElementById("p1").innerHTML = players;
-	
+document.getElementById("p2").innerHTML = 
+players.reduce(function(total, x){
+  return total + x;
+});;
 }
+/*The reduce() method applies a function against an accumulator 
+and each element in the array (from left to right) to reduce it to a single value.
+*/
 
 </script>
 </head>
 <body onload="start()">
 <h1>Contestants: </h1>
 	<p id="p1"></p>
+	<p id="p2"></p>
 </body>
 </html>
